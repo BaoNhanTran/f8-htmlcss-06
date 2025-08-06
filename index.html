@@ -43,7 +43,11 @@
                     <div class="center-y">
                         <!-- Logo -->
                         <a href="#" class="header-logo">
-                            <img src="./assets/img/logo.png" alt="Arif" class="logo-icon" />
+                            <picture class="logo-icon">
+                                <source media="(max-width: 991px)" srcset="./assets/img/logo.png" />
+                                <source media="(min-width: 992px)" srcset="./assets/img/large-logo.png" />
+                                <img src="./assets/img/large-logo.png" alt="Arif" />
+                            </picture>
                         </a>
 
                         <!-- PC nav -->
@@ -51,37 +55,36 @@
                             <ul id="pc-nav" class="nav-list">
                                 <li>
                                     <a class="nav-link" href="#projects">
-                                        <span class="desc desc--small nav-link__inner nav-link__inner--active"
-                                            >Projects</span
-                                        >
+                                        <span class="desc nav-link__inner nav-link__inner--active">Projects</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link" href="#journey">
-                                        <span class="desc desc--small nav-link__inner">Journey</span>
+                                        <span class="desc nav-link__inner">Journey</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link" href="#service">
-                                        <span class="desc desc--small nav-link__inner">Service</span>
+                                        <span class="desc nav-link__inner">Service</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link" href="#contact">
-                                        <span class="desc desc--small nav-link__inner">Contact</span>
+                                        <span class="desc nav-link__inner">Contact</span>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
 
-                    <!-- Toggle menu btn -->
                     <div class="header-action">
-                        <a href="mailto:hi@arif.interactive" class="header-mail-container">
+                        <a href="mailto:hi@arif.interactive" class="mail-container">
                             <div class="circle-icon-wrapper header-mail__icon-wrapper">
                                 <img src="./assets/img/heart-mail.png" alt="heart mail" class="mail__icon" />
                             </div>
+                            <p class="mail__text hide-on-mobile">hi@arif.interactive</p>
                         </a>
+                        <!-- Toggle menu btn -->
                         <label for="menu-checkbox" class="circle-icon-wrapper toggle-menu-btn hide-on-pc">
                             <svg
                                 width="17"
@@ -117,9 +120,21 @@
 
             <label for="menu-checkbox" class="menu-overlay"></label>
             <div class="menu-drawer">
-                <!-- Logo -->
-                <div class="menu-logo">
-                    <img src="./assets/img/logo.png" alt="Arif" class="logo-icon" />
+                <div class="menu-header flex-center-between">
+                    <!-- Logo -->
+                    <div class="menu-logo">
+                        <img src="./assets/img/logo.png" alt="Arif" class="logo-icon" />
+                    </div>
+
+                    <!-- Close btn -->
+                    <label for="menu-checkbox" class="menu-close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                            <path
+                                fill="currentColor"
+                                d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C240.4 221.6 255.6 221.6 264.9 231L319.9 286L374.9 231C384.3 221.6 399.5 221.6 408.8 231C418.1 240.4 418.2 255.6 408.8 264.9L353.8 319.9L408.8 374.9C418.2 384.3 418.2 399.5 408.8 408.8C399.4 418.1 384.2 418.2 374.9 408.8L319.9 353.8L264.9 408.8C255.5 418.2 240.3 418.2 231 408.8C221.7 399.4 221.6 384.2 231 374.9L286 319.9L231 264.9C221.6 255.5 221.6 240.3 231 231z"
+                            />
+                        </svg>
+                    </label>
                 </div>
 
                 <ul id="mobile-nav" class="mobile-nav"></ul>
@@ -134,30 +149,30 @@
             <!-- Hero section -->
             <section class="hero">
                 <div class="container">
-                    <div class="row center-y hero__row">
+                    <div class="row hero__row">
                         <!-- Hero content -->
-                        <div class="col-lg-5 offset-lg-1 col-md-6 col-12">
+                        <div class="col-lg-5 offset-lg-1 col-md-12 col-12">
                             <div class="hero-content">
                                 <h1 class="heading hero__heading" data-aos="flip-left" data-aos-duration="1500">
-                                    An Interactive Designer
+                                    An&nbsp;Interactive Designer
                                 </h1>
                                 <p class="desc">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt
                                     ut elementum turpis.
                                 </p>
 
-                                <!-- Hero cta group -->
+                                <!-- Hero content cta group -->
                                 <div class="hero-cta-group center-y">
-                                    <a href="#!" class="btn">Book a Call</a>
+                                    <a href="#!" class="btn primary-btn">Book a Call</a>
                                     <a href="#!" class="link">My Works</a>
                                 </div>
 
-                                <!-- Header socials -->
-                                <div class="header-follow center-y">
-                                    <p class="header-follow__desc">Follow me on:</p>
-                                    <div class="header-socials">
+                                <!-- Hero content follow -->
+                                <div class="hero-follow center-y">
+                                    <p class="hero-follow__desc">Follow me on:</p>
+                                    <div class="hero-socials">
                                         <!-- Behance -->
-                                        <a href="#!" class="circle-icon-wrapper header-social">
+                                        <a href="#!" class="circle-icon-wrapper hero-social-item">
                                             <svg
                                                 width="13"
                                                 height="9"
@@ -173,7 +188,7 @@
                                         </a>
 
                                         <!-- Dribbble -->
-                                        <a href="#!" class="circle-icon-wrapper header-social">
+                                        <a href="#!" class="circle-icon-wrapper hero-social-item">
                                             <svg
                                                 width="14"
                                                 height="13"
@@ -189,7 +204,7 @@
                                         </a>
 
                                         <!-- Instagram -->
-                                        <a href="#!" class="circle-icon-wrapper header-social">
+                                        <a href="#!" class="circle-icon-wrapper hero-social-item">
                                             <svg
                                                 width="13"
                                                 height="13"
@@ -215,27 +230,35 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Hero media -->
-                        <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-12 col-12 hero-media-wrapper">
                             <div class="hero-media">
-                                <figure data-aos="fade-down" class="hero-img-wrapper">
+                                <figure data-aos="zoom-in" data-aos-duration="1500" class="hero-img-wrapper">
                                     <div class="bg-img hero-img"></div>
                                 </figure>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- PC hero decor bottom right-->
+                <img
+                    src="./assets/img/PC-tablet-hero-decor-diagonal-bars-small.png"
+                    alt="PC decor bottom right"
+                    class="hero-decor-bottom-right hide-on-tablet-mobile"
+                />
             </section>
 
             <div class="container">
                 <!-- Clients -->
-                <section class="clients mt-120">
-                    <h2 class="heading heading--small clients__heading">Meet my recent clients</h2>
+                <section class="clients mobile-tablet-mt-120">
+                    <h2 class="heading heading--small clients__heading mx-auto">Meet my recent clients</h2>
                     <!-- Clients list -->
                     <div class="clients-list">
                         <div class="clients-list__inner">
                             <!-- Clients group 1 -->
-                            <div class="clients-group clients-group--1">
+                            <div class="clients-group clients-group--1" data-aos="fade-up-right">
                                 <img src="./assets/img/Google.png" alt="Google" style="width: 99px" />
                                 <img src="./assets/img/Warner-Bros.svg" alt="Warner Bros" />
                                 <img src="./assets/img/Upwork.svg" alt="Upwork" />
@@ -243,7 +266,7 @@
                             </div>
 
                             <!-- Clients group 2 -->
-                            <div class="clients-group clients-group--2">
+                            <div class="clients-group clients-group--2" data-aos="fade-up-left">
                                 <img src="./assets/img/Mailchimp.png" alt="Mailchimp" style="width: 131px" />
                                 <img src="./assets/img/Adobe.png" alt="Adobe" style="width: 102px" />
                                 <img src="./assets/img/Woocommercde.png" alt="Woocommercde" style="width: 173px" />
@@ -254,9 +277,9 @@
                 </section>
 
                 <!-- Specialties -->
-                <section class="specialties mt-120">
+                <section class="specialties mobile-tablet-mt-120 PC-mt-140">
                     <h2 class="heading">Specialties</h2>
-                    <p class="desc specialties__desc">
+                    <p class="desc specialties__desc PC-mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
                         elementum turpis.
                     </p>
@@ -264,7 +287,7 @@
                     <div class="specialties-list">
                         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
                             <!-- Specialty item 1 -->
-                            <div class="col">
+                            <div class="col" data-aos="zoom-in-right">
                                 <div class="specialty-item">
                                     <img
                                         src="./assets/img/specialties-light-bulb.png"
@@ -282,7 +305,7 @@
                             </div>
 
                             <!-- Specialty item 2 -->
-                            <div class="col">
+                            <div class="col" data-aos="zoom-in-up">
                                 <div class="specialty-item">
                                     <img
                                         src="./assets/img/specialties-pencil-and-ruler.png"
@@ -300,7 +323,7 @@
                             </div>
 
                             <!-- Specialty item 3 -->
-                            <div class="col">
+                            <div class="col" data-aos="zoom-in-left">
                                 <div class="specialty-item">
                                     <img
                                         src="./assets/img/specialties-arrow-left-to-phone.png"
@@ -322,7 +345,7 @@
                     </div>
 
                     <!-- Specialties dots -->
-                    <div class="dots specialties-dots">
+                    <div class="dots specialties-dots hide-on-pc">
                         <div class="dot"></div>
                         <div class="dot dot--active"></div>
                         <div class="dot"></div>
@@ -332,7 +355,7 @@
             <!-- End .container -->
 
             <!-- Projects -->
-            <section id="projects" class="projects mt-120">
+            <section id="projects" class="projects mobile-tablet-mt-120 PC-mt-140">
                 <div class="container">
                     <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1">
                         <div class="col">
@@ -353,13 +376,15 @@
                     <div class="projects-list">
                         <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1">
                             <!-- Project item 1 -->
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-duration="1500">
                                 <div class="project-item">
                                     <div class="row center-y">
                                         <div class="col-lg-6 col-md-6 col-7">
                                             <div class="project-item__info">
                                                 <a href="#!">
-                                                    <h3 class="heading heading--smaller">Wally Website</h3>
+                                                    <h3 class="heading heading--smaller project-item__heading">
+                                                        Wally Website
+                                                    </h3>
                                                 </a>
                                                 <p class="desc project-item__desc">
                                                     Lorem ipsum dolor amet, consectetur adipiscing st elit.
@@ -368,7 +393,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-5">
-                                            <figure class="project-img__wrapper">
+                                            <figure class="project-item-img__wrapper">
                                                 <img src="./assets/img/project-img-1.png" alt="image 1" />
                                             </figure>
                                         </div>
@@ -377,13 +402,15 @@
                             </div>
 
                             <!-- Project item 2 -->
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-duration="1500">
                                 <div class="project-item">
                                     <div class="row center-y">
                                         <div class="col-lg-6 col-md-6 col-7">
                                             <div class="project-item__info">
                                                 <a href="#!">
-                                                    <h3 class="heading heading--smaller">Banking App</h3>
+                                                    <h3 class="heading heading--smaller project-item__heading">
+                                                        Banking App
+                                                    </h3>
                                                 </a>
                                                 <p class="desc project-item__desc">
                                                     Lorem ipsum dolor amet, consectetur adipiscing st elit.
@@ -392,7 +419,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-5">
-                                            <figure class="project-img__wrapper">
+                                            <figure class="project-item-img__wrapper">
                                                 <img src="./assets/img/project-img-2.png" alt="image 2" />
                                             </figure>
                                         </div>
@@ -401,13 +428,15 @@
                             </div>
 
                             <!-- Project item 3 -->
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-duration="1500">
                                 <div class="project-item">
                                     <div class="row center-y">
                                         <div class="col-lg-6 col-md-6 col-7">
                                             <div class="project-item__info">
                                                 <a href="#!">
-                                                    <h3 class="heading heading--smaller">Web App</h3>
+                                                    <h3 class="heading heading--smaller project-item__heading">
+                                                        Web App
+                                                    </h3>
                                                 </a>
                                                 <p class="desc project-item__desc">
                                                     Lorem ipsum dolor amet, consectetur adipiscing st elit.
@@ -416,7 +445,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-5">
-                                            <figure class="project-img__wrapper">
+                                            <figure class="project-item-img__wrapper">
                                                 <img src="./assets/img/project-img-3.png" alt="image 3" />
                                             </figure>
                                         </div>
@@ -425,13 +454,15 @@
                             </div>
 
                             <!-- Project item 4 -->
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-duration="1500">
                                 <div class="project-item">
                                     <div class="row center-y">
                                         <div class="col-lg-6 col-md-6 col-7">
                                             <div class="project-item__info">
                                                 <a href="#!">
-                                                    <h3 class="heading heading--smaller">Oculus Website</h3>
+                                                    <h3 class="heading heading--smaller project-item__heading">
+                                                        Oculus Website
+                                                    </h3>
                                                 </a>
                                                 <p class="desc project-item__desc">
                                                     Lorem ipsum dolor amet, consectetur adipiscing st elit.
@@ -440,7 +471,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-5">
-                                            <figure class="project-img__wrapper">
+                                            <figure class="project-item-img__wrapper">
                                                 <img src="./assets/img/project-img-4.png" alt="image 4" />
                                             </figure>
                                         </div>
@@ -449,47 +480,58 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Projects btn -->
+                    <div class="flex-center">
+                        <a href="#!" class="btn projects-btn white-btn">All Projects</a>
+                    </div>
                 </div>
             </section>
 
             <!-- About -->
-            <section id="journey" class="about mt-120">
+            <section id="journey" class="about mobile-tablet-mt-120 PC-mt-140">
                 <div class="container">
-                    <div class="about-hello flex-center">
-                        <p class="label">Hey,,,,It’s Arif</p>
-                        <img src="./assets/img/about-wave-hand.png" alt="wave hand" />
-                    </div>
-                    <h2 class="heading">Interactive Designer</h2>
-                    <p class="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
-                        elementum turpis.
-                    </p>
-
-                    <!-- About stat -->
-                    <div class="about-stat flex-center-between">
-                        <!-- About stat item 1 -->
-                        <div class="about-stat-item">
-                            <strong class="about-stat-item__num">21+</strong>
-                            <p class="desc about-stat-item__desc">Features &&nbsp;Awards</p>
+                    <div class="about-header">
+                        <div class="about-hello flex-center">
+                            <p class="label">Hey,,,,It’s Arif</p>
+                            <img src="./assets/img/about-wave-hand.png" alt="wave hand" />
                         </div>
+                        <h2 class="heading">Interactive Designer</h2>
+                        <p class="desc about__desc PC-width-50p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
+                            elementum turpis.
+                        </p>
 
-                        <!-- About stat item 2 -->
-                        <div class="about-stat-item">
-                            <strong class="about-stat-item__num">08+</strong>
-                            <p class="desc about-stat-item__desc">Years Experience</p>
-                        </div>
+                        <!-- About stat -->
+                        <div class="about-stat flex-center-between">
+                            <!-- About stat item 1 -->
+                            <div class="about-stat-item">
+                                <strong class="about-stat-item__num">21+</strong>
+                                <p class="desc about-stat-item__desc">Features &&nbsp;Awards</p>
+                            </div>
 
-                        <!-- About stat item 3 -->
-                        <div class="about-stat-item">
-                            <strong class="about-stat-item__num">97%</strong>
-                            <p class="desc about-stat-item__desc">Clients Rating</p>
+                            <!-- About stat item 2 -->
+                            <div class="about-stat-item">
+                                <strong class="about-stat-item__num">08+</strong>
+                                <p class="desc about-stat-item__desc">Years Experience</p>
+                            </div>
+
+                            <!-- About stat item 3 -->
+                            <div class="about-stat-item">
+                                <strong class="about-stat-item__num">97%</strong>
+                                <p class="desc about-stat-item__desc">Clients Rating</p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- About video -->
                     <div class="about-video bg-img">
-                        <img src="./assets/icons/play-icon.svg" alt="play icon" class="about-video-play-btn" />
-                        <div class="about-video-label">Intro Video</div>
+                        <img
+                            src="./assets/icons/play-icon.svg"
+                            alt="play icon"
+                            class="about-video-play-btn white-btn"
+                        />
+                        <div class="about-video-label flex-center">Intro Video</div>
                     </div>
                 </div>
             </section>
@@ -498,33 +540,47 @@
             <section class="feedbacks">
                 <div class="container">
                     <!-- Feedback decor -->
-                    <img
-                        src="./assets/img/mobile-feedback-decor-left.png"
-                        alt="mobile feedback decor left"
-                        class="feedback-decor feedback-decor--left"
-                    />
-                    <img
-                        src="./assets/img/mobile-feedback-decor-right.png"
-                        alt="mobile feedback decor right"
-                        class="feedback-decor feedback-decor--right"
-                    />
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="./assets/img/mobile-feedback-decor-left.png" />
+                        <source media="(min-width: 768px)" srcset="./assets/img/PC-feedback-decor-left.png" />
+                        <img
+                            src="./assets/img/mobile-feedback-decor-left.png"
+                            alt="feedback decor left"
+                            class="feedback-decor feedback-decor--left"
+                        />
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="./assets/img/mobile-feedback-decor-right.png" />
+                        <source media="(min-width: 768px)" srcset="./assets/img/PC-feedback-decor-right.png" />
+                        <img
+                            src="./assets/img/mobile-feedback-decor-right.png"
+                            alt="feedback decor right"
+                            class="feedback-decor feedback-decor--right"
+                        />
+                    </picture>
                     <h2 class="heading">What people says</h2>
-                    <p class="desc">
+                    <p class="desc PC-width-50p PC-mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
                         elementum turpis.
                     </p>
 
                     <!-- Feedback item -->
                     <article class="feedback-item">
-                        <blockquote class="desc feedback-item-quote">
+                        <blockquote
+                            class="desc feedback-item-quote line-clamp line-4 PC-mx-auto"
+                            data-aos="fade-down"
+                            data-aos-anchor-placement="bottom-bottom"
+                        >
                             “Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.”
                         </blockquote>
-                        <div class="feedback-author flex-center">
-                            <div class="feedback-author__avatar bg-img"></div>
-                            <p class="heading heading--smaller feedback-author__name">Joe Elia</p>
+                        <div class="feedback-author" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                            <div class="feedback-author__info flex-center">
+                                <div class="feedback-author__avatar bg-img"></div>
+                                <p class="heading heading--smaller feedback-author__name">Joe Elia</p>
+                            </div>
+                            <p class="feedback-author__title">User Interface Design at PCL Lab</p>
                         </div>
-                        <p class="feedback-title">User Interface Design at PCL Lab</p>
 
                         <!-- Feedback dots -->
                         <div class="dots feedback-dots">
@@ -540,11 +596,13 @@
 
             <div class="container">
                 <!-- Question -->
-                <section id="service" class="questions mt-120">
-                    <h2 class="heading questions__heading">A few questions clients normally ask me</h2>
+                <section id="service" class="questions mobile-tablet-mt-120">
+                    <h2 class="heading questions__heading PC-width-50p">
+                        A few questions clients&nbsp;normally ask me
+                    </h2>
                     <ul class="questions-list">
                         <!-- Question item 1 -->
-                        <li class="question-item">
+                        <li class="question-item" data-aos="fade-right">
                             <input
                                 type="checkbox"
                                 id="question-item-1-checkbox"
@@ -556,17 +614,17 @@
                                 <h3 class="heading heading--smaller question-item__heading">
                                     What is your hourly rate?
                                 </h3>
-                                <label for="question-item-1-checkbox" class="question-item-toggle">
-                                    <div class="circle-icon-wrapper question-item-toggle__wrapper">
+                                <label for="question-item-1-checkbox">
+                                    <div class="circle-icon-wrapper question-item-toggle">
                                         <img
                                             src="./assets/icons/minus.svg"
                                             alt="minus icon"
-                                            class="question-icon question-icon--minus"
+                                            class="question-icon--minus"
                                         />
                                         <img
                                             src="./assets/icons/plus.svg"
                                             alt="plus icon"
-                                            class="question-icon question-icon--plus"
+                                            class="question-icon--plus"
                                         />
                                     </div>
                                 </label>
@@ -579,23 +637,23 @@
                         </li>
 
                         <!-- Question item 2 -->
-                        <li class="question-item">
+                        <li class="question-item" data-aos="fade-right">
                             <input type="checkbox" id="question-item-2-checkbox" class="question-checkbox" hidden />
                             <div class="question-item-header flex-center-between">
                                 <h3 class="heading heading--smaller question-item__heading">
                                     What type of projects do you take on?
                                 </h3>
-                                <label for="question-item-2-checkbox" class="question-item-toggle">
-                                    <div class="circle-icon-wrapper question-item-toggle__wrapper">
+                                <label for="question-item-2-checkbox">
+                                    <div class="circle-icon-wrapper question-item-toggle">
                                         <img
                                             src="./assets/icons/minus.svg"
                                             alt="minus icon"
-                                            class="question-icon question-icon--minus"
+                                            class="question-icon--minus"
                                         />
                                         <img
                                             src="./assets/icons/plus.svg"
                                             alt="plus icon"
-                                            class="question-icon question-icon--plus"
+                                            class="question-icon--plus"
                                         />
                                     </div>
                                 </label>
@@ -608,23 +666,23 @@
                         </li>
 
                         <!-- Question item 3 -->
-                        <li class="question-item">
+                        <li class="question-item" data-aos="fade-right">
                             <input type="checkbox" id="question-item-3-checkbox" class="question-checkbox" hidden />
                             <div class="question-item-header flex-center-between">
                                 <h3 class="heading heading--smaller question-item__heading">
                                     How do you charge for projects?
                                 </h3>
-                                <label for="question-item-3-checkbox" class="question-item-toggle">
-                                    <div class="circle-icon-wrapper question-item-toggle__wrapper">
+                                <label for="question-item-3-checkbox">
+                                    <div class="circle-icon-wrapper question-item-toggle">
                                         <img
                                             src="./assets/icons/minus.svg"
                                             alt="minus icon"
-                                            class="question-icon question-icon--minus"
+                                            class="question-icon--minus"
                                         />
                                         <img
                                             src="./assets/icons/plus.svg"
                                             alt="plus icon"
-                                            class="question-icon question-icon--plus"
+                                            class="question-icon--plus"
                                         />
                                     </div>
                                 </label>
@@ -637,23 +695,23 @@
                         </li>
 
                         <!-- Question item 4 -->
-                        <li class="question-item">
+                        <li class="question-item" data-aos="fade-right">
                             <input type="checkbox" id="question-item-4-checkbox" class="question-checkbox" hidden />
                             <div class="question-item-header flex-center-between">
                                 <h3 class="heading heading--smaller question-item__heading">
                                     What time-zone do you work in?
                                 </h3>
-                                <label for="question-item-4-checkbox" class="question-item-toggle">
-                                    <div class="circle-icon-wrapper question-item-toggle__wrapper">
+                                <label for="question-item-4-checkbox">
+                                    <div class="circle-icon-wrapper question-item-toggle">
                                         <img
                                             src="./assets/icons/minus.svg"
                                             alt="minus icon"
-                                            class="question-icon question-icon--minus"
+                                            class="question-icon--minus"
                                         />
                                         <img
                                             src="./assets/icons/plus.svg"
                                             alt="plus icon"
-                                            class="question-icon question-icon--plus"
+                                            class="question-icon--plus"
                                         />
                                     </div>
                                 </label>
@@ -666,23 +724,23 @@
                         </li>
 
                         <!-- Question item 5 -->
-                        <li class="question-item">
+                        <li class="question-item" data-aos="fade-right">
                             <input type="checkbox" id="question-item-5-checkbox" class="question-checkbox" hidden />
                             <div class="question-item-header flex-center-between">
                                 <h3 class="heading heading--smaller question-item__heading">
                                     How often can we communicate?
                                 </h3>
-                                <label for="question-item-5-checkbox" class="question-item-toggle">
-                                    <div class="circle-icon-wrapper question-item-toggle__wrapper">
+                                <label for="question-item-5-checkbox">
+                                    <div class="circle-icon-wrapper question-item-toggle">
                                         <img
                                             src="./assets/icons/minus.svg"
                                             alt="minus icon"
-                                            class="question-icon question-icon--minus"
+                                            class="question-icon--minus"
                                         />
                                         <img
                                             src="./assets/icons/plus.svg"
                                             alt="plus icon"
-                                            class="question-icon question-icon--plus"
+                                            class="question-icon--plus"
                                         />
                                     </div>
                                 </label>
@@ -697,9 +755,9 @@
                 </section>
 
                 <!-- Atmosphere -->
-                <section class="atmosphere mt-120">
+                <section class="atmosphere mobile-tablet-mt-120">
                     <h2 class="heading">My atmosphere</h2>
-                    <p class="desc">
+                    <p class="desc atmosphere__desc PC-mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
                         elementum turpis.
                     </p>
@@ -742,7 +800,7 @@
                     </div>
 
                     <!-- Atmosphere dots -->
-                    <div class="dots atmosphere-dots">
+                    <div class="dots atmosphere-dots show-on-mobile">
                         <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot dot--active"></div>
@@ -754,25 +812,60 @@
             <!-- End .container -->
 
             <!-- Contact -->
-            <section id="contact" class="contact mt-120 bg-img">
+            <section id="contact" class="contact mobile-tablet-mt-120 PC-mt-140 bg-img">
+                <!-- Mobile contact decor -->
+                <img
+                    src="./assets/img/mobile-contact-bg-decor.png"
+                    alt="contact decor center"
+                    class="contact-decor contact-decor--center show-on-mobile"
+                />
                 <div class="container">
-                    <img src="./assets/img/contact-emoji.png" alt="contact emoji" class="contact-emoji" />
-                    <h2 class="heading contact__heading">Got a project? Let’s talk</h2>
-                    <p class="desc contact__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
-                        elementum turpis.
-                    </p>
-                    <a href="#!" class="btn contact-btn">Book a Call</a>
+                    <div class="contact-body">
+                        <!-- PC Contact decor -->
+                        <!-- PC Contact decor center -->
+                        <img
+                            src="./assets/img/PC-contact-bg-decor-center.png"
+                            alt="contact decor center"
+                            class="contact-decor contact-decor--center hide-on-mobile"
+                        />
+
+                        <!-- PC Contact decor bottom left -->
+                        <img
+                            src="./assets/img/PC-contact-bg-decor-bottom-left.png"
+                            alt="contact decor bottom left"
+                            class="contact-decor contact-decor--bottom-left hide-on-mobile"
+                        />
+
+                        <!-- PC Contact decor top right -->
+                        <img
+                            src="./assets/img/PC-contact-bg-decor-top-right.png"
+                            alt="contact decor top right"
+                            class="contact-decor contact-decor--top-right hide-on-mobile"
+                        />
+
+                        <!-- Contact info -->
+                        <div class="contact-info">
+                            <img src="./assets/img/contact-emoji.png" alt="contact emoji" class="contact-emoji" />
+                            <h2 class="heading contact__heading mx-auto">Got a project? Let’s&nbsp;talk</h2>
+                            <p class="desc contact__desc PC-width-50p PC-mx-auto">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut
+                                elementum turpis.
+                            </p>
+                            <a href="#!" class="btn primary-btn contact-btn">Book a Call</a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
 
         <!-- Footer -->
-        <footer class="footer mt-120">
+        <footer class="footer mobile-tablet-mt-120">
             <div class="container">
                 <!-- Footer row top -->
-                <div class="footer-row">
-                    <img src="./assets/img/large-logo.png" alt="large logo" class="large-logo" />
+                <div class="footer-row footer-row--top">
+                    <a href="#" class="footer-logo">
+                        <img src="./assets/img/large-logo.png" alt="large logo" class="large-logo" />
+                    </a>
                     <ul id="footer-nav" class="footer-nav">
                         <script>
                             const footerNav = document.querySelector('#footer-nav');
@@ -789,12 +882,16 @@
             </div>
 
             <!-- Footer row bottom -->
-            <div class="footer-row footer-row--bottom">
-                <div class="footer-policy center-y">
-                    <a href="#!" class="footer__desc footer__link">Privacy Policy</a>
-                    <a href="#!" class="footer__desc footer__link">Terms of Conditions</a>
+            <div class="footer-row--bottom-outer">
+                <div class="container">
+                    <div class="row footer-row footer-row--bottom">
+                        <div class="footer-policy center-y">
+                            <a href="#!" class="footer__desc footer__link">Privacy Policy</a>
+                            <a href="#!" class="footer__desc footer__link">Terms of Conditions</a>
+                        </div>
+                        <div class="footer-copyright footer__desc">©interactiveArif 2021. All rights reserved.</div>
+                    </div>
                 </div>
-                <div class="footer-copyright footer__desc">©interactiveArif 2021. All rights reserved.</div>
             </div>
         </footer>
 
